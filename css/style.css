@@ -1,0 +1,117 @@
+@charset "UTF-8";
+
+@import url(reset.css);
+@import url(font.css);
+p, span, a, button {color: #fff;}
+.centerbox1400 {max-width: 1400px; margin: 0 auto;}
+.centerbox1300 {max-width: 1300px; margin: 0 auto;}
+
+/* nav {position: fixed; width: 100%; z-index: 9;}
+nav > ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+nav > ul > li {
+
+}
+nav > ul > li  > a {
+    display: block;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    padding: 0 30px;
+} */
+header {
+    position: absolute;
+    z-index: 7;
+    width: 100%;
+}
+.back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between; /* 로고와 네비게이션 사이의 공간 분배 */
+    align-items: center;
+    padding: 0 100px; /* 좌우 패딩으로 위치 조정 */
+    border-bottom: 0.5px solid #ddd;
+}
+.back::before   {}
+
+header .back h1  {width: 90px;}
+
+header .back nav {display: flex; height: 97px; }
+
+header .back nav .gnb  {width: 100%; display: flex; justify-content: space-around; align-items: center; transition: color 0.3s ease, filter 0.3s ease; /* 호버 시 색상 전환 및 필터 추가 */}
+header.back nav.gnb:hover {filter: blur(1px); /* 호버 시 살짝 블러 처리 */}
+header .back nav .gnb li a  {
+    color: white;
+    padding: 0 50px; /* 항목 간의 간격을 위해 패딩 추가 */
+}
+header .back nav .gnb li a:hover {
+    color: #f6e2a3; /* 호버 시 색상 변경 */
+}
+
+.main_text   {
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.sparkle-effect img {
+    position: absolute;
+    left: -40px; /* 이미지의 위치를 조정 */
+    opacity: 0.5;
+}
+
+
+.main_text p {font-size: 24px; font-family: 'Paperlogy-1Thin'; margin-bottom: 5px;}
+.main_text h2 {
+    font-size: 80px;
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: italic;
+  }
+
+.widget   {
+    width: 823px;
+    height: 57px;
+    border: 1px solid #fff;
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    display: flex;
+}
+.widget .reservation  {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.widget .reservation .widget_item .tit {
+    font-size: 14px;
+    font-weight: lighter;
+    color: #5177c3;
+}
+.widget .reservation .widget_item .cont {
+    font-size: 20px;
+    color: white;
+}
+
+
+.section1 {
+    background: url(../images/main.jpg) no-repeat center;
+    background-size: cover; /* 배경 이미지를 헤더 전체에 맞춤 */
+    position: absolute;
+    height: 100vh; /* 헤더를 화면 전체 높이로 설정 */
+}
+.section2 {background: skyblue;}
+.section3 {background: salmon;}
+.section4 {background: teal;}
+footer {padding: 100px;}

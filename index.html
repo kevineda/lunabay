@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunabay</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jquery.fullpage.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap');
+        </style>
+</head>
+<body>
+    <!-- <nav>
+        <ul>
+            <li><a href="#">section1</a></li>
+            <li><a href="#">section2</a></li>
+            <li><a href="#">section3</a></li>
+            <li><a href="#">section4</a></li>
+        </ul>
+    </nav> -->
+    <header>
+        <div class="back">
+            <h1><a href="#"><img src="images/logo_02.png" alt=""></a></h1>
+            <nav>
+                <ul class="gnb">
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">ROOMS</a></li>
+                    <li><a href="#">DINING</a></li>
+                    <li><a href="#">EXPERIENCE</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div id="fullpage">
+        <div class="section section1">
+            <div class="main_text">
+                <figure class="sparkle-effect">
+                    <img src="images/sparkle.png" alt="Sparkle">
+                </figure>
+                
+                <p class="sub_title">“ 밤하늘의 평온함을 당신의 공간으로 ”</p>
+                <h2 class="main_title">Welcome to Lunabay Hotel</h2>
+            </div>
+            <div class="widget">
+                <div class="reservation">
+                    <div class="widget_item">
+                        <p class="tit">reservation</p>
+                        <p class="cont">room</p>
+                    </div>
+                </div>
+        
+                <div class="widget_item">
+                    <p class="tit">checkin/out</p>
+                    <p class="cont">2024.08.28 수요일 - 2028.08.28 일요일</p>
+                </div>
+        
+                <div class="widget-item">
+                    <p class="tit">ADULT</p>
+                    <p class="cont">2</p>
+                </div>
+                <div class="widget-item">
+                    <p class="tit">CHILDREN</p>
+                    <p class="cont">0</p>
+                </div>
+                <div class="widget-item">
+                    <button>예약하기</button>
+                </div>
+            </div>
+        </div>
+        <div class="section section2">2</div>
+        <div class="section section3">3</div>
+        <div class="section section4">4</div>
+        <footer class="section fp-auto-height">footer</footer>
+    </div>
+
+
+
+    <script src="script/jquery-3.7.1.js"></script>
+    <script src="script/action.js"></script>
+    <script src="script/jquery.fullpage.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                navigation:true,
+                afterLoad: function(anchorName, index ) {
+                    $('.section').eq(index-1).addClass('on');
+                }
+            /*     anchors:['#s1', '#s2', '#s3','#s4']; */
+            });
+        });
+    </script>
+</body>
+</html>
